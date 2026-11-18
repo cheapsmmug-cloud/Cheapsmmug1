@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
-    <title>SETTINGS | SMMMARIA Panel</title>
+    <title>SETTINGS | Cheapsmmug Panel</title>
     
     <!-- ==========================================
          2. SEO METADATA
          ========================================== -->
-    <meta name="description" content="SMM-MARIA is a premium global SMM panel and social media marketing management platform. We provide automated SaaS solutions, seamless API integration, instant order processing, and affordable growth services for Instagram, TikTok, YouTube, Facebook, and more. Boost your online presence and scale your digital marketing efforts today.">
-    <meta name="keywords" content="SMM Panel, Social Media Marketing, SMM-MARIA, Best SMM Panel, Cheap SMM Panel, SaaS Platform, Social Media Growth, API Integration, Automated Marketing, Instagram Followers, TikTok Views, YouTube Subscribers, Facebook Likes, SEO Services, Digital Marketing Platform, SMM Reseller Panel, Social Media Management, Increase Twitter Followers, Twitch Viewers">
-    <meta name="author" content="SMM-MARIA">
+    <meta name="description" content="Manage your Cheapsmmug Panel account settings, update your profile, change your password, and configure notifications.">
+    <meta name="keywords" content="Cheapsmmug Settings, SMM Panel Settings, Account Management, Cheapsmmug Panel">
+    <meta name="author" content="Cheapsmmug">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://smmaria.netlify.app/settings">
+    <link rel="canonical" href="https://cheapsmmug.netlify.app/settings">
     
     <!-- ==========================================
          3. THEME COLOR & WINDOWS TILES
@@ -32,11 +32,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="SMM-MARIA">
+    <meta name="apple-mobile-web-app-title" content="Cheapsmmug">
     
     <!-- ==========================================
          5. FAVICON SYSTEM (Modern Browsers)
-         Ensure these files exist in assets/icons/
          ========================================== -->
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
@@ -50,22 +49,19 @@
     
     <!-- ==========================================
          7. SOCIAL SHARING & "BUTTON" UI PREVIEW
-         The og-image.png MUST be a 1200x630 graphic
-         designed to visually look like an app card 
-         with Login and Get Started buttons.
          ========================================== -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SMM-MARIA">
-    <meta property="og:title" content="SMM-MARIA | SMM Platform">
-    <meta property="og:description" content="Access the professional SMM platform. Log in or get started instantly to automate your social media marketing.">
+    <meta property="og:site_name" content="Cheapsmmug">
+    <meta property="og:title" content="Settings | Cheapsmmug Panel">
+    <meta property="og:description" content="Manage your Cheapsmmug Panel account settings, update your profile, change your password, and configure notifications.">
     <meta property="og:image" content="assets/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://smmaria.netlify.app/settings">
+    <meta property="og:url" content="https://cheapsmmug.netlify.app/settings">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SMM-MARIA | SMM Platform">
-    <meta name="twitter:description" content="Access the professional SMM platform. Log in or get started instantly to automate your social media marketing.">
+    <meta name="twitter:title" content="Settings | Cheapsmmug Panel">
+    <meta name="twitter:description" content="Manage your Cheapsmmug Panel account settings, update your profile, change your password, and configure notifications.">
     <meta name="twitter:image" content="assets/images/og-image.png">
     
     <!-- ==========================================
@@ -93,43 +89,185 @@
     <link rel="stylesheet" href="assets/css/dashboard.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     
-
     <style>
-        /* Tab content logic */
+        /* ===============================================
+           SETTINGS PAGE - ENTERPRISE SAAS STYLING
+           =============================================== */
+        :root {
+            --blue: #2563EB;
+            --blue-hover: #1D4ED8;
+            --text: #111827;
+            --muted: #64748B;
+            --bg: #F8FAFC;
+            --card: #FFFFFF;
+            --border: #E5E7EB;
+            --danger: #ef4444;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* Page Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 16px;
+        }
+        .page-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0;
+        }
+        .breadcrumbs {
+            font-size: 13px;
+            color: var(--muted);
+        }
+        .breadcrumbs a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        /* Cards */
+        .card.settings-card {
+            background: var(--card) !important;
+            border: 1px solid var(--border) !important;
+            border-radius: 4px !important; /* Sharp rectangular */
+            box-shadow: none !important;
+            padding: 24px;
+        }
+
+        /* Tabs */
+        .tabs--vertical {
+            border-right: 1px solid var(--border);
+            padding-right: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .tabs--vertical .tab {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 10px 16px;
+            border-radius: 4px;
+            background: transparent;
+            color: var(--muted);
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .tabs--vertical .tab:hover {
+            background: #f8fafc;
+            color: var(--text);
+            border-color: var(--border);
+        }
+        .tabs--vertical .tab.active {
+            background: var(--blue);
+            color: #fff;
+            border-color: var(--blue);
+        }
+
+        /* Tab Content */
         .tab-content {
             display: none;
         }
         .tab-content.active {
             display: block;
         }
-        /* Make vertical tabs look better */
-        .tabs--vertical {
-            border-right: 1px solid var(--border-color);
-            padding-right: 15px;
+        
+        /* Forms */
+        .form-group {
+            margin-bottom: 20px;
         }
-        .tabs--vertical .tab {
+        .form-label {
             display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        .form-input {
             width: 100%;
-            text-align: left;
-            margin-bottom: 10px;
-            padding: 12px 15px;
-            border-radius: var(--radius-sm);
-            background: transparent;
-            color: var(--text-secondary);
-            border: 1px solid transparent;
+            background: #f8fafc !important;
+            border: 1px solid var(--border) !important;
+            border-radius: 4px !important;
+            padding: 10px 14px !important;
+            color: var(--text) !important;
+            font-size: 14px !important;
+            min-height: 42px;
+            box-sizing: border-box;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--blue) !important;
+            box-shadow: 0 0 0 1px var(--blue) !important;
+        }
+        .form-input[readonly] {
+            background-color: #f1f5f9 !important;
+            cursor: not-allowed;
+        }
+        
+        /* Buttons */
+        .btn--primary {
+            background: var(--blue) !important;
+            color: #fff !important;
+            border: 1px solid var(--blue) !important;
+            padding: 10px 18px !important;
+            font-size: 14px !important;
+            border-radius: 4px !important;
+            font-weight: 600 !important;
             cursor: pointer;
-            transition: all 0.2s;
-            font-weight: 500;
+            transition: background 0.2s ease;
         }
-        .tabs--vertical .tab:hover {
-            background: var(--bg-input);
-            color: var(--text-primary);
+        .btn--primary:hover {
+            background: var(--blue-hover) !important;
+            border-color: var(--blue-hover) !important;
         }
-        .tabs--vertical .tab.active {
-            background: var(--color-gold);
-            color: #fff;
-            border-color: var(--color-gold);
+        .btn--outline {
+            background: #fff !important;
+            border: 1px solid var(--border) !important;
+            color: var(--text) !important;
+            padding: 8px 14px !important;
+            font-size: 13px !important;
+            border-radius: 4px !important;
+            font-weight: 500 !important;
+            cursor: pointer;
+            transition: all 0.2s ease;
         }
+        .btn--outline:hover {
+            background: #f8fafc !important;
+            border-color: var(--blue) !important;
+            color: var(--blue) !important;
+        }
+        .btn--danger {
+            background: transparent !important;
+            color: var(--danger) !important;
+            border: 1px solid var(--danger) !important;
+            padding: 10px 18px !important;
+            font-size: 14px !important;
+            border-radius: 4px !important;
+            font-weight: 600 !important;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .btn--danger:hover {
+            background: var(--danger) !important;
+            color: #fff !important;
+        }
+        
+        /* Info Grid */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -139,7 +277,350 @@
             .info-grid {
                 grid-template-columns: 1fr;
             }
+            .card.settings-card {
+                flex-direction: column !important;
+            }
+            .tabs--vertical {
+                border-right: none;
+                border-bottom: 1px solid var(--border);
+                padding-right: 0;
+                padding-bottom: 15px;
+                flex-direction: row;
+                overflow-x: auto;
+            }
         }
+        
+/* ==========================================
+   SETTINGS PAGE - CSS DISPLAY FIX
+   Mobile + Desktop Responsive
+   ========================================== */
+
+/* Main settings card */
+.card.settings-card {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    gap: 25px !important;
+    width: 100% !important;
+    padding: 25px !important;
+    background: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    box-sizing: border-box !important;
+}
+
+/* Settings tabs */
+.tabs--vertical {
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 0 0 210px !important;
+    width: 210px !important;
+    min-width: 0 !important;
+    gap: 8px !important;
+    padding: 0 15px 0 0 !important;
+    border-right: 1px solid #e5e7eb !important;
+    border-bottom: none !important;
+    box-sizing: border-box !important;
+}
+
+/* Individual tab buttons */
+.tabs--vertical .tab {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    padding: 12px 16px !important;
+    margin: 0 !important;
+
+    background: transparent !important;
+    color: #475569 !important;
+
+    border: 1px solid transparent !important;
+    border-radius: 6px !important;
+
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+
+    cursor: pointer !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    box-shadow: none !important;
+}
+
+/* Hover state */
+.tabs--vertical .tab:hover {
+    background: #eff6ff !important;
+    color: #2563eb !important;
+    border-color: #dbeafe !important;
+}
+
+/* Active tab */
+.tabs--vertical .tab.active {
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 2px 5px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Settings content */
+.settings-content {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Tab content visibility */
+.tab-content {
+    display: none !important;
+    width: 100% !important;
+}
+
+.tab-content.active {
+    display: block !important;
+}
+
+/* Form layout */
+.form-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    width: 100% !important;
+}
+
+.form-group {
+    display: flex !important;
+    flex-direction: column !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+.form-group--full {
+    grid-column: 1 / -1 !important;
+}
+
+/* Form labels */
+.form-label {
+    display: block !important;
+    margin-bottom: 8px !important;
+    color: #374151 !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+/* Form inputs */
+.form-input {
+    display: block !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    padding: 12px 14px !important;
+    box-sizing: border-box !important;
+    background: #f8fafc !important;
+    color: #111827 !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 14px !important;
+}
+
+.form-input:focus {
+    outline: none !important;
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* All Settings buttons */
+.settings-card button {
+    font-family: 'Inter', sans-serif !important;
+    cursor: pointer !important;
+    box-sizing: border-box !important;
+}
+
+/* Primary buttons */
+.settings-card .btn--primary {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+    width: auto !important;
+    padding: 11px 22px !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border: 1px solid #2563eb !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+}
+
+.settings-card .btn--primary:hover {
+    background: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+}
+
+/* Outline buttons */
+.settings-card .btn--outline {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 42px !important;
+    width: auto !important;
+    padding: 10px 18px !important;
+    background: #ffffff !important;
+    color: #374151 !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+/* Danger button */
+.settings-card .btn--danger {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+    padding: 11px 20px !important;
+    background: #ffffff !important;
+    color: #dc2626 !important;
+    border: 1px solid #dc2626 !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.settings-card .btn--danger:hover {
+    background: #dc2626 !important;
+    color: #ffffff !important;
+}
+
+/* Avatar section */
+.avatar-upload {
+    display: flex !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    gap: 15px !important;
+}
+
+#settings-avatar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+/* Billing and security content */
+#billing-tab,
+#security-tab,
+#profile-tab {
+    box-sizing: border-box !important;
+}
+
+/* ==========================================
+   TABLET AND MOBILE
+   ========================================== */
+
+@media (max-width: 768px) {
+
+    .card.settings-card {
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        gap: 20px !important;
+        padding: 16px !important;
+        width: 100% !important;
+    }
+
+    /* Horizontal tabs on mobile */
+    .tabs--vertical {
+        display: flex !important;
+        flex-direction: row !important;
+        flex: none !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 0 0 12px 0 !important;
+        gap: 8px !important;
+        border-right: none !important;
+        border-bottom: 1px solid #e5e7eb !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scrollbar-width: none !important;
+    }
+
+    .tabs--vertical::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .tabs--vertical .tab {
+        flex: 1 0 auto !important;
+        width: auto !important;
+        min-width: 90px !important;
+        min-height: 44px !important;
+        justify-content: center !important;
+        padding: 10px 14px !important;
+        text-align: center !important;
+        font-size: 13px !important;
+    }
+
+    .settings-content {
+        width: 100% !important;
+        min-width: 0 !important;
+        flex: none !important;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .form-group--full {
+        grid-column: 1 !important;
+    }
+
+    .settings-card .btn--primary,
+    .settings-card .btn--danger {
+        max-width: 100% !important;
+    }
+
+    .page-header {
+        align-items: flex-start !important;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    .card.settings-card {
+        padding: 14px !important;
+        gap: 16px !important;
+    }
+
+    .tabs--vertical .tab {
+        min-width: 85px !important;
+        padding: 10px 12px !important;
+        font-size: 12px !important;
+    }
+
+    .form-input {
+        min-height: 44px !important;
+        font-size: 14px !important;
+    }
+
+    .settings-card .btn--primary,
+    .settings-card .btn--danger {
+        width: 100% !important;
+    }
+
+    .avatar-upload .btn--outline {
+        min-height: 42px !important;
+    }
+}
+
     </style>
 </head>
 <body data-page="settings">
@@ -149,7 +630,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar__header">
                 <a href="dashboard.html" class="sidebar__logo">
-                    <span class="logo-text">SMM<span class="text-gold">MARIA</span></span>
+                    <span class="logo-text">CHEAP<span class="text-gold" style="color: #2563EB;">SMMUG</span></span>
                 </a>
                 <button class="sidebar__collapse-btn" id="collapse-btn" aria-label="Collapse Sidebar">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
@@ -163,26 +644,13 @@
                     <li class="sidebar__item"><a href="mass-order.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg><span class="link-text">Mass Order</span></a></li>
                     <li class="sidebar__item"><a href="services.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span class="link-text">Services</span></a></li>
                     <li class="sidebar__item"><a href="orders.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"></path><polyline points="9 11 12 14 15 11"></polyline><line x1="12" y1="2" x2="12" y2="14"></line></svg><span class="link-text">Orders</span></a></li>
-                     <li class="sidebar__item"><a href="buy-account.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="link-text">Buy Account</span></a></li>
-                    <li class="sidebar__item"><a href="my-accounts.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span class="link-text">My Accounts</span></a></li>
                     <li class="sidebar__item"><a href="tickets.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span class="link-text">Tickets</span><span class="badge badge--notification">3</span></a></li>
                     <li class="sidebar__item"><a href="wallet.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg><span class="link-text">Wallet</span></a></li>
                     <li class="sidebar__item"><a href="refill.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg><span class="link-text">Refill</span></a></li>
                     <li class="sidebar__item"><a href="api.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><span class="link-text">API</span></a></li>
                     <li class="sidebar__item"><a href="affiliate.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="link-text">Affiliate</span></a></li>
-                    <li class="sidebar__item">
-                        <a href="buy-child-panel.html" class="sidebar__link">
-                            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                            <span class="link-text"> Child Panel</span>
-                        </a>
-                    </li>
                     <li class="sidebar__item "><a href="documentation.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span class="link-text">Documentation</span></a></li>
-                    <li class="sidebar__item active"><a href="settings.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg><span class="link-text">Settings/Notifications</span></a></li>
+                    <li class="sidebar__item active"><a href="settings.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg><span class="link-text">Settings</span></a></li>
                     <li class="sidebar__item "><a href="invoice.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg><span class="link-text">Invoice</span></a></li>
                 </ul>
             </nav>
@@ -198,8 +666,6 @@
                         </a>
                     </div>
                 </div>
-
-
 
                 <div class="sidebar__widget" data-widget-section="currency">
                     <span class="sidebar__widget-label">
@@ -276,7 +742,7 @@
                             <span class="widget-service__status">Online</span>
                         </div>
                         <div class="widget-service" data-service-status="telegram" data-status="online">
-                            <span class="widget-service__dot" data-status-indicator"></span>
+                            <span class="widget-service__dot" data-status-indicator></span>
                             <span class="widget-service__name">Telegram</span>
                             <span class="widget-service__status">Online</span>
                         </div>
@@ -356,7 +822,7 @@
                 <div class="navbar__right">
                     <div class="navbar__balance">
                         <span class="balance-label">Balance:</span>
-                       <span class="balance-amount text-gold">0.00</span>
+                       <span class="balance-amount text-gold" style="color: #2563EB;">0.00</span>
                     </div>
                     
                    <!-- NEW NOTIFICATION BUTTON -->
@@ -370,7 +836,7 @@
                     </button>
                     
                     <div class="navbar__profile">
-                        <div class="avatar">..</div>
+                        <div class="avatar" style="background: #2563EB;">..</div>
                         <div class="profile__info">
                             <span class="profile__name">Guest</span>
                             <span class="profile__role">User</span>
@@ -383,12 +849,15 @@
               <!-- PAGE SPECIFIC CONTENT -->
             <main class="content-area" id="page-content">
                 <div class="page-header">
-                    <h1 class="page-title">Settings</h1>
+                    <div>
+                        <h1 class="page-title">Settings</h1>
+                        <p style="font-size: 14px; color: var(--muted); margin-top: 4px;">Manage your account profile, security, and preferences.</p>
+                    </div>
                     <div class="breadcrumbs"><a href="dashboard.html">Dashboard</a> / <span>Settings</span></div>
                 </div>
                 
                 <!-- MAIN SETTINGS CARD -->
-                <div class="card settings-card" style="display: flex; flex-wrap: wrap; gap: 30px; padding: 30px;">
+                <div class="card settings-card" style="display: flex; flex-wrap: wrap; gap: 30px;">
                     <!-- Vertical Tabs -->
                     <div class="tabs tabs--vertical" style="flex: 1; min-width: 200px;">
                         <button class="tab active" data-tab="profile">Profile</button>
@@ -451,8 +920,8 @@
                                     <input type="text" id="settings-referral-code" class="form-input" readonly>
                                 </div>
                                 
-                                <div class="form-group form-group--full" style="margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 20px;">
-                                    <h3 style="margin-bottom: 15px;">Change Password</h3>
+                                <div class="form-group form-group--full" style="margin-top: 20px; border-top: 1px solid var(--border); padding-top: 20px;">
+                                    <h3 style="margin-bottom: 15px; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600;">Change Password</h3>
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label">Current Password</label>
@@ -469,15 +938,15 @@
                             
                             <!-- DANGER ZONE -->
                             <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid rgba(239, 68, 68, 0.2);">
-                                <h3 style="color: #ef4444; margin-bottom: 10px;">Danger Zone</h3>
-                                <p class="text-muted" style="font-size: 14px; margin-bottom: 15px;">Deleting your account is permanent and cannot be undone. All your orders, wallet balance, and data will be lost.</p>
+                                <h3 style="color: #ef4444; margin-bottom: 10px; font-family: 'Poppins', sans-serif; font-size: 16px; font-weight: 600;">Danger Zone</h3>
+                                <p style="color: var(--muted); font-size: 14px; margin-bottom: 15px;">Deleting your account is permanent and cannot be undone. All your orders, wallet balance, and data will be lost.</p>
                                 <button id="deleteAccountBtn" class="btn btn--danger">Delete My Account</button>
                             </div>
                         </div>
                         
                         <!-- BILLING TAB -->
                         <div class="tab-content" id="billing-tab">
-                            <p class="text-muted">Billing settings coming soon.</p>
+                            <p style="color: var(--muted); font-size: 14px;">Billing settings coming soon.</p>
                         </div>
                         
                     </div>
@@ -487,7 +956,7 @@
 
            <!-- DESKTOP FOOTER COMPONENT -->
             <footer class="footer">
-                <p class="footer__text">© 2026 SMMMARIA Panel. All rights reserved.</p>
+                <p class="footer__text">© 2026 Cheapsmmug Panel. All rights reserved.</p>
                 <div class="footer__links">
                     <a href="terms.html">Terms</a>
                     <a href="privacy.html">Privacy</a>
@@ -502,20 +971,13 @@
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
                 <span>Dashboard</span>
             </a>
-             <a href="terms.html" class="mobile-nav__link">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="8" y1="13" x2="16" y2="13"></line>
-                    <line x1="8" y1="17" x2="16" y2="17"></line>
-                </svg>
-                <span>Terms</span>
+            <a href="services.html" class="mobile-nav__link">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span>Services</span>
             </a>
-            <a href="privacy.html" class="mobile-nav__link">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-                <span>Privacy</span>
+            <a href="orders.html" class="mobile-nav__link">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"></path><polyline points="9 11 12 14 15 11"></polyline><line x1="12" y1="2" x2="12" y2="14"></line></svg>
+                <span>Orders</span>
             </a>
             <a href="wallet.html" class="mobile-nav__link">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
