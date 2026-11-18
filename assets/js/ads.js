@@ -8,8 +8,8 @@ window.SMM_ADS = [
     {
         id: 1,
         type: "image",
-        title: "Advertisement One",
-        media: "assets/ads/ad1.jpg",
+        title: "Tiktok views",
+        media: "https://ik.imagekit.io/s95tumxuk/IMG_6342.png",
         link: "https://example.com",
         active: true
     },
