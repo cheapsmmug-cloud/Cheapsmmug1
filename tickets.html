@@ -8,16 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     
-    <title> SUPPORT TICKETS | SMMMARIA Panel</title>
+    <title>SUPPORT TICKETS | Cheapsmmug Panel</title>
     
     <!-- ==========================================
          2. SEO METADATA
          ========================================== -->
-    <meta name="description" content="SMM-MARIA is a premium global SMM panel and social media marketing management platform. We provide automated SaaS solutions, seamless API integration, instant order processing, and affordable growth services for Instagram, TikTok, YouTube, Facebook, and more. Boost your online presence and scale your digital marketing efforts today.">
-    <meta name="keywords" content="SMM Panel, Social Media Marketing, SMM-MARIA, Best SMM Panel, Cheap SMM Panel, SaaS Platform, Social Media Growth, API Integration, Automated Marketing, Instagram Followers, TikTok Views, YouTube Subscribers, Facebook Likes, SEO Services, Digital Marketing Platform, SMM Reseller Panel, Social Media Management, Increase Twitter Followers, Twitch Viewers">
-    <meta name="author" content="SMM-MARIA">
+    <meta name="description" content="Manage your Cheapsmmug Panel support tickets. View conversations and get real-time assistance from our support team.">
+    <meta name="keywords" content="Cheapsmmug Tickets, SMM Panel Support, Help Desk, Cheapsmmug Panel">
+    <meta name="author" content="Cheapsmmug">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://smmaria.netlify.app/tickets">
+    <link rel="canonical" href="https://cheapsmmug.netlify.app/tickets">
     
     <!-- ==========================================
          3. THEME COLOR & WINDOWS TILES
@@ -32,11 +32,10 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="SMM-MARIA">
+    <meta name="apple-mobile-web-app-title" content="Cheapsmmug">
     
     <!-- ==========================================
          5. FAVICON SYSTEM (Modern Browsers)
-         Ensure these files exist in assets/icons/
          ========================================== -->
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
@@ -50,22 +49,19 @@
     
     <!-- ==========================================
          7. SOCIAL SHARING & "BUTTON" UI PREVIEW
-         The og-image.png MUST be a 1200x630 graphic
-         designed to visually look like an app card 
-         with Login and Get Started buttons.
          ========================================== -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SMM-MARIA">
-    <meta property="og:title" content="SMM-MARIA | SMM Platform">
-    <meta property="og:description" content="Access the professional SMM platform. Log in or get started instantly to automate your social media marketing.">
+    <meta property="og:site_name" content="Cheapsmmug">
+    <meta property="og:title" content="Support Tickets | Cheapsmmug Panel">
+    <meta property="og:description" content="Manage your Cheapsmmug Panel support tickets. View conversations and get real-time assistance from our support team.">
     <meta property="og:image" content="assets/images/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://smmaria.netlify.app/tickets">
+    <meta property="og:url" content="https://cheapsmmug.netlify.app/tickets">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SMM-MARIA | SMM Platform">
-    <meta name="twitter:description" content="Access the professional SMM platform. Log in or get started instantly to automate your social media marketing.">
+    <meta name="twitter:title" content="Support Tickets | Cheapsmmug Panel">
+    <meta name="twitter:description" content="Manage your Cheapsmmug Panel support tickets. View conversations and get real-time assistance from our support team.">
     <meta name="twitter:image" content="assets/images/og-image.png">
     
     <!-- ==========================================
@@ -93,6 +89,880 @@
     <link rel="stylesheet" href="assets/css/dashboard.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     
+    <style>
+        /* ===============================================
+           TICKETS PAGE - ENTERPRISE SAAS STYLING
+           =============================================== */
+        :root {
+            --blue: #2563EB;
+            --blue-hover: #1D4ED8;
+            --text: #111827;
+            --muted: #64748B;
+            --bg: #F8FAFC;
+            --card: #FFFFFF;
+            --border: #E5E7EB;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+
+        /* Page Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 16px;
+        }
+        .page-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            margin: 0;
+        }
+        .breadcrumbs {
+            font-size: 13px;
+            color: var(--muted);
+        }
+        .breadcrumbs a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        /* Inbox Layout */
+        .inbox-layout {
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 24px;
+            height: calc(100vh - 250px);
+            min-height: 500px;
+        }
+        @media (max-width: 768px) {
+            .inbox-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Cards */
+        .card.inbox-list, .card.inbox-chat {
+            background: var(--card) !important;
+            border: 1px solid var(--border) !important;
+            border-radius: 4px !important; /* Sharp rectangular */
+            box-shadow: none !important;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .card__header {
+            border-bottom: 1px solid var(--border) !important;
+            padding: 16px 20px !important;
+            margin-bottom: 0 !important;
+            background: #f8fafc !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card__title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            color: var(--text) !important;
+            margin: 0 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Ticket Items */
+        .ticket-items {
+            flex: 1;
+            overflow-y: auto;
+        }
+        .ticket-item {
+            padding: 16px 20px;
+            border-bottom: 1px solid #f1f5f9;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .ticket-item:hover {
+            background: #f8fafc;
+        }
+        .ticket-item.active {
+            background: rgba(37, 99, 235, 0.05);
+            border-left: 3px solid var(--blue);
+        }
+        .ticket-item__top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+        .ticket-item__name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text);
+        }
+        .ticket-item__time {
+            font-size: 12px;
+            color: var(--muted);
+        }
+        .ticket-item__msg {
+            font-size: 13px;
+            color: var(--muted);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Chat Area */
+        .chat-header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            background: #f8fafc;
+        }
+        .chat-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 0;
+        }
+        .chat-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background: #f8fafc;
+        }
+        .chat-message {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 1.5;
+            border: 1px solid var(--border);
+            background: #fff;
+        }
+        .chat-message--right {
+            align-self: flex-end;
+            background: var(--blue);
+            color: #fff;
+            border-color: var(--blue);
+        }
+        .chat-footer {
+            padding: 16px;
+            border-top: 1px solid var(--border);
+            background: #fff;
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Forms & Buttons */
+        .form-input {
+            flex: 1;
+            background: #f8fafc !important;
+            border: 1px solid var(--border) !important;
+            border-radius: 4px !important;
+            padding: 10px 14px !important;
+            color: var(--text) !important;
+            font-size: 14px !important;
+            min-height: 42px;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: var(--blue) !important;
+            box-shadow: 0 0 0 1px var(--blue) !important;
+        }
+        .btn--primary {
+            background: var(--blue) !important;
+            color: #fff !important;
+            border: 1px solid var(--blue) !important;
+            padding: 10px 18px !important;
+            font-size: 14px !important;
+            border-radius: 4px !important;
+            font-weight: 600 !important;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+        .btn--primary:hover {
+            background: var(--blue-hover) !important;
+            border-color: var(--blue-hover) !important;
+        }
+        .btn--outline {
+            background: #fff !important;
+            border: 1px solid var(--border) !important;
+            color: var(--text) !important;
+            padding: 8px 14px !important;
+            font-size: 13px !important;
+            border-radius: 4px !important;
+            font-weight: 500 !important;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .btn--outline:hover {
+            background: #f8fafc !important;
+            border-color: var(--blue) !important;
+            color: var(--blue) !important;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(17, 24, 39, 0.6);
+            backdrop-filter: blur(4px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .modal-overlay.active {
+            display: flex;
+        }
+        .modal {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 4px !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        .modal__header {
+            padding: 16px 20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8fafc;
+        }
+        .modal__title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text);
+            margin: 0;
+        }
+        .modal__close {
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--muted);
+            line-height: 1;
+        }
+        .modal__body {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 8px;
+        }
+        
+/* =====================================================
+   SUPPORT TICKETS - RESPONSIVE LAYOUT FIX
+   ===================================================== */
+
+/* Prevent horizontal overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    min-width: 0;
+    width: 100%;
+}
+
+.content-area {
+    width: 100%;
+    min-width: 0;
+    padding: 24px;
+}
+
+/* =====================================================
+   PAGE HEADER
+   ===================================================== */
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+}
+
+.page-header > div:first-child {
+    min-width: 0;
+}
+
+.page-title {
+    font-size: 24px;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+}
+
+.page-header p {
+    line-height: 1.6;
+}
+
+.breadcrumbs {
+    white-space: nowrap;
+}
+
+/* =====================================================
+   INBOX MAIN LAYOUT
+   ===================================================== */
+
+.inbox-layout {
+    display: grid;
+    grid-template-columns: minmax(280px, 340px) minmax(0, 1fr);
+    gap: 20px;
+
+    width: 100%;
+    height: min(720px, calc(100vh - 260px));
+    min-height: 500px;
+    align-items: stretch;
+}
+
+/* Both cards */
+.card.inbox-list,
+.card.inbox-chat {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--card) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04) !important;
+
+    overflow: hidden;
+}
+
+/* =====================================================
+   CONVERSATIONS HEADER
+   ===================================================== */
+
+.card__header {
+    min-height: 75px;
+    padding: 18px 20px !important;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    background: #fff !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.card__title {
+    font-size: 16px !important;
+    line-height: 1.5;
+}
+
+#new-ticket-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* =====================================================
+   TICKET LIST
+   ===================================================== */
+
+.ticket-items {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+}
+
+.ticket-item {
+    width: 100%;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+}
+
+.ticket-item:hover {
+    background: #f8fafc;
+}
+
+.ticket-item.active {
+    background: rgba(37, 99, 235, 0.06);
+    border-left: 3px solid var(--blue);
+}
+
+.ticket-item__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.ticket-item__name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ticket-item__msg {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* =====================================================
+   CHAT HEADER
+   ===================================================== */
+
+.chat-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 75px;
+    padding: 16px 20px;
+
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+}
+
+.chat-header > div {
+    width: 100%;
+    min-width: 0;
+}
+
+.chat-title {
+    font-size: 17px;
+    line-height: 1.5;
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* Back button */
+.back-to-tickets-btn {
+    position: static;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 0 12px 0 !important;
+    white-space: normal;
+}
+
+/* =====================================================
+   CHAT BODY
+   ===================================================== */
+
+.chat-body {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background: #f8fafc;
+}
+
+.chat-message {
+    max-width: 75%;
+    width: fit-content;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    line-height: 1.6;
+}
+
+.chat-message--right {
+    align-self: flex-end;
+}
+
+/* =====================================================
+   CHAT FOOTER
+   ===================================================== */
+
+.chat-footer {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+
+    padding: 15px;
+    background: #fff;
+    border-top: 1px solid var(--border);
+}
+
+.chat-footer .form-input {
+    min-width: 0;
+    flex: 1;
+    resize: vertical;
+}
+
+.chat-footer button {
+    flex-shrink: 0;
+}
+
+/* =====================================================
+   NEW TICKET MODAL
+   ===================================================== */
+
+.modal-overlay {
+    padding: 16px;
+    overflow-y: auto;
+}
+
+.modal {
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 12px !important;
+}
+
+.modal__body {
+    padding: 22px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-input {
+    width: 100%;
+    max-width: 100%;
+}
+
+#new-ticket-form .btn {
+    width: 100%;
+}
+
+/* =====================================================
+   TABLET RESPONSIVENESS
+   ===================================================== */
+
+@media (max-width: 992px) {
+
+    .inbox-layout {
+        grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .content-area {
+        padding: 20px;
+    }
+
+    .chat-message {
+        max-width: 85%;
+    }
+}
+
+/* =====================================================
+   MOBILE RESPONSIVENESS
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .main-wrapper {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .content-area {
+        width: 100%;
+        padding: 20px 15px 100px !important;
+    }
+
+    /* Page heading */
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+    }
+
+    .page-title {
+        font-size: 21px;
+    }
+
+    .page-header p {
+        font-size: 13px !important;
+    }
+
+    .breadcrumbs {
+        font-size: 13px;
+    }
+
+    /* Stack inbox cards without distributing
+       excessive empty vertical space */
+    .inbox-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: 220px minmax(420px, 1fr);
+
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        gap: 15px;
+    }
+
+    .card.inbox-list {
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .card.inbox-chat {
+        height: 480px;
+        min-height: 420px;
+    }
+
+    /* Conversations */
+    .card__header {
+        min-height: 65px;
+        padding: 14px !important;
+    }
+
+    .card__title {
+        font-size: 14px !important;
+    }
+
+    #new-ticket-btn {
+        padding: 9px 14px !important;
+        font-size: 13px !important;
+    }
+
+    .ticket-item {
+        padding: 12px 15px;
+    }
+
+    /* Chat header */
+    .chat-header {
+        padding: 14px;
+        min-height: 75px;
+    }
+
+    .chat-title {
+        font-size: 16px;
+    }
+
+    .back-to-tickets-btn {
+        font-size: 13px !important;
+        padding: 8px 12px !important;
+    }
+
+    /* Messages */
+    .chat-body {
+        padding: 14px;
+        gap: 12px;
+    }
+
+    .chat-message {
+        max-width: 88%;
+        font-size: 13px;
+        padding: 10px 13px;
+    }
+
+    /* Reply section */
+    .chat-footer {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .chat-footer .form-input {
+        font-size: 13px !important;
+        min-height: 42px;
+    }
+
+    .chat-footer button {
+        padding: 10px 12px !important;
+        font-size: 13px !important;
+    }
+
+    /* Modal */
+    .modal {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .modal__body {
+        padding: 16px;
+    }
+
+    /* Bottom navigation */
+    .mobile-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 900;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        padding-bottom: env(safe-area-inset-bottom);
+        background: #fff;
+        border-top: 1px solid var(--border);
+    }
+
+    .mobile-nav__link {
+        flex: 1;
+        min-width: 0;
+        padding: 10px 3px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+    .mobile-nav__link svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    /* Avoid footer occupying mobile space */
+    .footer {
+        display: none;
+    }
+}
+
+/* =====================================================
+   SMALL MOBILE SCREENS
+   ===================================================== */
+
+@media (max-width: 380px) {
+
+    .content-area {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+
+    .inbox-layout {
+        grid-template-rows: 200px minmax(400px, 1fr);
+    }
+
+    .card.inbox-list {
+        height: 200px;
+        min-height: 200px;
+    }
+
+    .card.inbox-chat {
+        height: 450px;
+        min-height: 400px;
+    }
+
+    .card__header {
+        padding: 12px !important;
+    }
+
+    .card__title {
+        font-size: 13px !important;
+    }
+
+    #new-ticket-btn {
+        padding: 8px 10px !important;
+    }
+
+    .chat-footer {
+        flex-wrap: wrap;
+    }
+
+    .chat-footer button {
+        min-height: 40px;
+    }
+}
+
+/* =====================================================
+   DARK MODE SUPPORT
+   ===================================================== */
+
+[data-theme="dark"] .card__header,
+[data-theme="dark"] .chat-header,
+[data-theme="dark"] .ticket-items,
+[data-theme="dark"] .chat-footer,
+[data-theme="dark"] .mobile-nav {
+    background: var(--card) !important;
+}
+
+[data-theme="dark"] .chat-body {
+    background: var(--bg) !important;
+}
+
+[data-theme="dark"] .ticket-item:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+[data-theme="dark"] .chat-message {
+    background: var(--card);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+[data-theme="dark"] .chat-message--right {
+    background: var(--blue);
+    color: #fff;
+    border-color: var(--blue);
+}
+
+    </style>
 </head>
 <body data-page="tickets">
     <div class="app-container">
@@ -101,7 +971,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar__header">
                 <a href="dashboard.html" class="sidebar__logo">
-                    <span class="logo-text">SMM<span class="text-gold">MARIA</span></span>
+                    <span class="logo-text">CHEAP<span class="text-gold" style="color: #2563EB;">SMMUG</span></span>
                 </a>
                 <button class="sidebar__collapse-btn" id="collapse-btn" aria-label="Collapse Sidebar">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
@@ -115,26 +985,13 @@
                     <li class="sidebar__item"><a href="mass-order.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg><span class="link-text">Mass Order</span></a></li>
                     <li class="sidebar__item"><a href="services.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span class="link-text">Services</span></a></li>
                     <li class="sidebar__item"><a href="orders.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"></path><polyline points="9 11 12 14 15 11"></polyline><line x1="12" y1="2" x2="12" y2="14"></line></svg><span class="link-text">Orders</span></a></li>
-                     <li class="sidebar__item"><a href="buy-account.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="link-text">Buy Account</span></a></li>
-                    <li class="sidebar__item"><a href="my-accounts.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span class="link-text">My Accounts</span></a></li>
                     <li class="sidebar__item active"><a href="tickets.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg><span class="link-text">Tickets</span><span class="badge badge--notification">3</span></a></li>
                     <li class="sidebar__item"><a href="wallet.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg><span class="link-text">Wallet</span></a></li>
                     <li class="sidebar__item"><a href="refill.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg><span class="link-text">Refill</span></a></li>
                     <li class="sidebar__item"><a href="api.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><span class="link-text">API</span></a></li>
                     <li class="sidebar__item"><a href="affiliate.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span class="link-text">Affiliate</span></a></li>
-                    <li class="sidebar__item">
-                        <a href="buy-child-panel.html" class="sidebar__link">
-                            <svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="3" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="3" width="7" height="7"></rect>
-                                <rect x="14" y="14" width="7" height="7"></rect>
-                                <rect x="3" y="14" width="7" height="7"></rect>
-                            </svg>
-                            <span class="link-text"> Child Panel</span>
-                        </a>
-                    </li>
                     <li class="sidebar__item "><a href="documentation.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg><span class="link-text">Documentation</span></a></li>
-                    <li class="sidebar__item"><a href="settings.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg><span class="link-text">Settings/Notifications</span></a></li>
+                    <li class="sidebar__item"><a href="settings.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg><span class="link-text">Settings</span></a></li>
                     <li class="sidebar__item "><a href="invoice.html" class="sidebar__link"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg><span class="link-text">Invoice</span></a></li>
                 </ul>
             </nav>
@@ -143,7 +1000,7 @@
                 <div class="sidebar__widget">
                     <span class="sidebar__widget-label">Account Balance</span>
                     <div class="widget-balance" data-widget="balance">
-                        <span class="widget-balance__amount" data-widget="balance-value">0.00</span>
+                        <span class="widget-balance__amount" data-widget="balance-value">$0.00</span>
                         <a href="wallet.html" class="widget-balance__btn">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"></path></svg>
                             Add Funds
@@ -236,7 +1093,7 @@
                             <span class="widget-service__status">Online</span>
                         </div>
                         <div class="widget-service" data-service-status="spotify" data-status="online">
-                            <span class="widget-service__dot" data-status-indicator"></span>
+                            <span class="widget-service__dot" data-status-indicator></span>
                             <span class="widget-service__name">Spotify</span>
                             <span class="widget-service__status">Online</span>
                         </div>
@@ -306,7 +1163,7 @@
                 <div class="navbar__right">
                     <div class="navbar__balance">
                         <span class="balance-label">Balance:</span>
-                       <span class="balance-amount text-gold">0.00</span>
+                       <span class="balance-amount text-gold" style="color: #2563EB;">0.00</span>
                     </div>
                      <!-- NEW NOTIFICATION BUTTON -->
         <a href="notifications.html" class="navbar__icon-btn" id="notif-btn" aria-label="Notifications" style="position: relative;">
@@ -319,7 +1176,7 @@
                     </button>
                     
                     <div class="navbar__profile">
-                        <div class="avatar">..</div>
+                        <div class="avatar" style="background: #2563EB;">..</div>
                         <div class="profile__info">
                             <span class="profile__name">Guest</span>
                             <span class="profile__role">User</span>
@@ -332,7 +1189,10 @@
             <!-- PAGE SPECIFIC CONTENT -->
             <main class="content-area" id="page-content">
                 <div class="page-header">
-                    <h1 class="page-title">Support Tickets</h1>
+                    <div>
+                        <h1 class="page-title">Support Tickets</h1>
+                        <p style="font-size: 14px; color: var(--muted); margin-top: 4px;">View and manage your support conversations.</p>
+                    </div>
                     <div class="breadcrumbs"><a href="dashboard.html">Dashboard</a> / <span>Tickets</span></div>
                 </div>
 
@@ -350,12 +1210,12 @@
                     
                     <!-- Chat Area -->
                     <div class="card inbox-chat">
-                   <div class="chat-header">
-    <button id="back-to-tickets-btn" class="btn btn--outline btn--sm back-to-tickets-btn" style="display: none; margin-bottom: 10px;">← Back to Tickets</button>
-    <div>
-        <h3 class="chat-title" id="chat-title">Select a ticket to view</h3>
-    </div>
-</div>
+                        <div class="chat-header">
+                            <button id="back-to-tickets-btn" class="btn btn--outline btn--sm back-to-tickets-btn" style="display: none; margin-bottom: 10px;">← Back to Tickets</button>
+                            <div>
+                                <h3 class="chat-title" id="chat-title">Select a ticket to view</h3>
+                            </div>
+                        </div>
                         <div class="chat-body" id="chat-body">
                             <!-- Chat messages injected by JS -->
                         </div>
@@ -369,7 +1229,7 @@
 
                 <!-- DESKTOP FOOTER COMPONENT -->
             <footer class="footer">
-                <p class="footer__text">© 2026 SMMMARIA Panel. All rights reserved.</p>
+                <p class="footer__text">© 2026 Cheapsmmug Panel. All rights reserved.</p>
                 <div class="footer__links">
                     <a href="terms.html">Terms</a>
                     <a href="privacy.html">Privacy</a>
@@ -407,7 +1267,7 @@
         <div class="modal" style="max-width: 500px; width: 90%;">
             <div class="modal__header">
                 <h3 class="modal__title">New Ticket</h3>
-                <button id="closeTicketModalBtn" class="modal__close" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-secondary);">&times;</button>
+                <button id="closeTicketModalBtn" class="modal__close" style="background: none; border: none; font-size: 24px; cursor: pointer; color: var(--muted);">&times;</button>
             </div>
             <div class="modal__body">
                 <form id="new-ticket-form" style="display: grid; gap: 15px;">
