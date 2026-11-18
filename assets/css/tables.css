@@ -180,4 +180,251 @@
     font-weight: 500;
     color: var(--text-secondary, #6b7280);
     margin-bottom: 8px; /* Pushes the "All time" text down slightly */
+} 
+
+/* ===============================================
+   ORDERS PAGE - TABLE DISPLAY FIX
+   =============================================== */
+
+/* Prevent the table from squeezing its columns */
+.table-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+}
+
+/* Give the order history table enough room */
+#ordersTable {
+    width: 100%;
+    min-width: 1100px;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+/* Keep headings readable */
+#ordersTable thead th {
+    white-space: nowrap !important;
+    word-break: normal;
+    overflow-wrap: normal;
+    padding: 14px 12px;
+    min-width: 75px;
+}
+
+/* Keep order information readable */
+#ordersTable tbody td {
+    white-space: nowrap !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+    padding: 14px 12px;
+    vertical-align: middle;
+}
+
+/* Allow order links to remain readable */
+#ordersTable td a {
+    display: inline-block;
+    max-width: 220px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+/* Keep progress indicators visible */
+#ordersTable .progress-bar {
+    min-width: 80px;
+}
+
+/* ===============================================
+   CURRENT ACTIVE ORDERS DISPLAY FIX
+   =============================================== */
+
+.current-orders-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+.co-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.co-header {
+    flex-wrap: wrap;
+}
+
+.co-header-left {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Show the complete order link */
+.co-link {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    text-overflow: clip;
+}
+
+/* Keep order statistics readable */
+.co-stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.co-stat-item {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.co-stat-value {
+    overflow-wrap: anywhere;
+}
+
+/* Keep progress bar responsive */
+.co-progress-bar-bg {
+    width: 100%;
+}
+
+/* Fix active order footer */
+.co-footer {
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ===============================================
+   EMPTY ACTIVE ORDERS DISPLAY
+   =============================================== */
+
+.empty-state-box {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.empty-state-box svg {
+    display: block;
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 100%;
+    margin: 0 auto 16px;
+}
+
+/* ===============================================
+   MOBILE ORDERS PAGE
+   =============================================== */
+
+@media (max-width: 768px) {
+
+    .table-card {
+        padding: 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .table-toolbar {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .table-filters {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .table-filters input,
+    .table-filters select {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .table-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .table-actions .btn {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* Horizontal scrolling instead of vertical text */
+    .table-responsive {
+        width: 100%;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #ordersTable {
+        min-width: 1100px;
+    }
+
+    .current-orders-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .co-card {
+        padding: 14px;
+    }
+
+    .co-stats-grid {
+        gap: 5px;
+        padding: 8px 4px;
+    }
+
+    .co-stat-label {
+        font-size: 9px;
+    }
+
+    .co-stat-value {
+        font-size: 12px;
+    }
+
+    .empty-state-box {
+        padding: 30px 16px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+}
+
+/* ===============================================
+   VERY SMALL MOBILE SCREENS
+   =============================================== */
+
+@media (max-width: 380px) {
+
+    .co-card {
+        padding: 10px;
+    }
+
+    .co-footer {
+        gap: 8px;
+    }
+
+    .co-stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .table-card {
+        padding: 8px;
+    }
 }
