@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="_4VcrmvY2S8GSdic0AMrBR1BlTx5-5-dA4GR_ZXe2TU" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 Not Found | SMMMARIA Panel</title>
+    <title>404 Not Found | CHEAPSMMUG</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
     
     <!-- Keep your core variables and resets -->
     <link rel="stylesheet" href="assets/css/reset.css">
@@ -18,48 +18,17 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 
     <style>
-        /* Advanced 404 Page Styling */
+        /* Clean SaaS 404 Page Styling */
         body.error-body {
             margin: 0;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--bg-body);
-            /* Animated Tech Grid Background */
-            background-image: 
-                linear-gradient(rgba(244, 179, 66, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(244, 179, 66, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
+            background-color: #F8FAFC; /* Clean off-white background */
             overflow: hidden;
             position: relative;
-        }
-
-        /* Glowing orbs in the background */
-        body.error-body::before, body.error-body::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            z-index: 0;
-            opacity: 0.4;
-            animation: floatOrb 10s ease-in-out infinite;
-        }
-        body.error-body::before {
-            width: 400px; height: 400px;
-            background: var(--color-gold);
-            top: -100px; left: -100px;
-        }
-        body.error-body::after {
-            width: 300px; height: 300px;
-            background: var(--color-primary);
-            bottom: -50px; right: -50px;
-            animation-delay: -5s;
-        }
-
-        @keyframes floatOrb {
-            0%, 100% { transform: translate(0, 0); }
-            50% { transform: translate(40px, 40px); }
+            font-family: 'Inter', sans-serif;
         }
 
         .error-container {
@@ -71,14 +40,12 @@
             width: 100%;
         }
 
-        /* Glassmorphism Card */
+        /* SaaS Card */
         .error-card {
-            background: rgba(var(--bg-card-rgb, 255, 255, 255), 0.6);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            border-radius: 24px;
+            background: #FFFFFF;
+            border: 1px solid #E5E7EB;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            border-radius: 8px; /* Subtle, professional radius */
             padding: 50px 40px;
             animation: fadeUp 1s ease-out;
         }
@@ -90,43 +57,41 @@
 
         /* Floating Illustration */
         .error-illustration {
-            width: 120px;
-            height: 120px;
+            width: 80px;
+            height: 80px;
             margin: 0 auto 20px;
             animation: float 3s ease-in-out infinite;
+            color: #2563EB; /* SaaS Blue */
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+            50% { transform: translateY(-10px); }
         }
 
-        /* Massive Gradient 404 Text */
+        /* Massive Solid 404 Text */
         .error-code {
-            font-family: 'Poppins', sans-serif;
-            font-size: clamp(6rem, 20vw, 10rem);
+            font-family: 'Manrope', sans-serif;
+            font-size: clamp(6rem, 20vw, 9rem);
             font-weight: 800;
             line-height: 1;
             margin: 0;
-            background: linear-gradient(135deg, var(--color-gold) 0%, #fbbf24 50%, var(--color-primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 10px 20px rgba(244, 179, 66, 0.3));
-            letter-spacing: -5px;
+            color: #2563EB; /* Solid Blue */
+            letter-spacing: -2px;
         }
 
         .error-title {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Manrope', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--text-primary);
+            color: #111827; /* Dark text */
             margin: 10px 0 15px;
         }
 
         .error-text {
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            color: var(--text-secondary);
+            color: #64748B; /* Muted text */
             max-width: 380px;
             margin: 0 auto 35px;
             line-height: 1.6;
@@ -144,10 +109,10 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(16, 185, 129, 0.1);
+            background: rgba(16, 185, 129, 0.05);
             color: #10b981;
             padding: 6px 16px;
-            border-radius: 50px;
+            border-radius: 4px; /* Sharp edges */
             font-size: 12px;
             font-weight: 600;
             margin-bottom: 30px;
@@ -190,17 +155,18 @@
                 System Operational
             </div>
 
-            <!-- Floating Astronaut/SVG Illustration -->
+            <!-- Floating Server/SVG Illustration -->
             <div class="error-illustration">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-gold);">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                    <path d="M2 17l10 5 10-5"></path>
-                    <path d="M2 12l10 5 10-5"></path>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                    <line x1="6" y1="18" x2="6.01" y2="18"></line>
                 </svg>
             </div>
 
             <h1 class="error-code">404</h1>
-            <h2 class="error-title">Lost in the Digital Space</h2>
+            <h2 class="error-title">Page Not Found</h2>
             <p class="error-text">
                 The page you are looking for might have been removed, had its name changed, or is temporarily unavailable. Let's get you back on track.
             </p>
