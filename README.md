@@ -1,4 +1,4 @@
-# SMMMARIA PANEL 
+# CHEAPSMMUG
 
 > Enterprise-grade Social Media Marketing (SMM) Panel with automated
 > order fulfillment, wallet management, supplier integrations, Child
@@ -9,9 +9,9 @@
 <div align="center">
 
 <img src="https://ik.imagekit.io/s95tumxuk/IMG_3295.png"
-     alt="SMMMARIA Creator"
+     alt="CHEAPSMMUG Creator"
      width="180"
-     height="230"
+     height="180"
      style="border-radius: 50%; object-fit: cover;">
 
 ### Created by **MARKMELLON**
@@ -21,19 +21,8 @@
 💬 [Chat with the Creator on WhatsApp](https://wa.me/256743668990)
 
 </div>
-## 👨‍💻 Developer
 
-<div align="center">
-
-### MarkMellon
-
-🌐 **Official Developer Website:**  
-<a href="https://markmellon.site">MarkMellon.site</a>
-
-💻 Web Development | Software Solutions | Digital Services
-
-</div>
------------------------------------------
+------------------------------------------------------------------------
 
 ## Table of Contents
 
